@@ -25,4 +25,10 @@ public class TasksController {
 
         return tasksRepository.findAll();
     }
+
+    @GetMapping("/today")
+    public List<TasksModel> getTaskToday(){
+
+        return tasksRepository.getTaskToday();
+    }
 }
