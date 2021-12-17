@@ -52,5 +52,11 @@ public class TasksController {
         return tasksRepository.save(tasksModel);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteTask(@PathVariable Long id){
+
+        tasksRepository.deleteById(id);
+    }
+
 
 }
