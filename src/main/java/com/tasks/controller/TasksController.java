@@ -44,4 +44,13 @@ public class TasksController {
         }
         return null;
     }
+
+    @PutMapping("/{id}")
+    public TasksModel putTasks(@RequestBody TasksModel tasksModel, @PathVariable Long id){
+
+        tasksModel.setId(id);
+        return tasksRepository.save(tasksModel);
+    }
+
+
 }
